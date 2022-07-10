@@ -29,6 +29,8 @@ else
     echo -e "${red}未检测到系统版本，请联系脚本作者！${plain}\n" && exit 1
 fi
 
+os_version=""
+
 arch=$(arch)
 
 if [[ $arch == "x86_64" || $arch == "x64" || $arch == "amd64" ]]; then
@@ -134,7 +136,7 @@ install_XrayR() {
     chmod +x XrayR
     mkdir /etc/XrayR/ -p
     rm /etc/systemd/system/XrayR.service -f
-    file="https://github.com/1660limo/xrayryd/raw/main/XrayR.service"
+    file="https://github.com/1660limo/xrayryd/main/raw/master/XrayR.service"
     wget -q -N --no-check-certificate -O /etc/systemd/system/XrayR.service ${file}
     #cp -f XrayR.service /etc/systemd/system/
     systemctl daemon-reload
@@ -147,7 +149,7 @@ install_XrayR() {
     if [[ ! -f /etc/XrayR/config.yml ]]; then
         cp config.yml /etc/XrayR/
         echo -e ""
-        echo -e "全新安装，请先参看教程配置必要的内容"
+        echo -e "全新安装，请先参看教程：https://github.com/1660limo/XrayR，配置必要的内容"
     else
         systemctl start XrayR
         sleep 2
@@ -156,7 +158,7 @@ install_XrayR() {
         if [[ $? == 0 ]]; then
             echo -e "${green}XrayR 重启成功${plain}"
         else
-            echo -e "${red}XrayR 可能启动失败，请稍后使用 XrayR log 查看日志信息，若无法启动，则可能更改了配置格式，请前往 wiki 查看：https://github.com/XrayR-project/XrayR/wiki${plain}"
+            echo -e "${red}XrayR 可能启动失败，请稍后使用 XrayR log 查看日志信息，若无法启动，则可能更改了配置格式，请前往 wiki 查看：https://github.com/1660limo/XrayR/wiki${plain}"
         fi
     fi
 
