@@ -1,10 +1,6 @@
 # XRayR
 
-
 Find the source code here: [youzi3/XrayR](https://github.com/youzi3/XrayR)
-
-如对脚本不放心，可使用此沙箱先测一遍再使用：https://killercoda.com/playgrounds/scenario/ubuntu
-
 
 # 一键安装
 
@@ -29,9 +25,6 @@ chmod +x /usr/local/bin/docker-compose
 
 2. `git clone https://github.com/youzi3/XrayR-script XrayR-release`
 3. `cd XrayR-release`
-4. 编辑config。
-配置文件基本格式如下，Nodes下可以同时添加多个面板，多个节点配置信息，只需添加相同格式的Nodes item即可。
-5. 启动docker：`docker-compose up -d`
 ```
 Log:
   Level: none # Log level: none, error, warning, info, debug 
@@ -86,7 +79,7 @@ Nodes:
   -
     PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
     ApiConfig:
-      ApiHost: "https://host.ydcloud.us"
+      ApiHost: "https://ydcloud.us"
       ApiKey: "166047247413699467619"
       NodeID: 23
       NodeType: V2ray # Node type: V2ray, Shadowsocks, Trojan, Shadowsocks-Plugin
