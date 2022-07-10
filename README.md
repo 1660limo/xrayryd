@@ -14,7 +14,7 @@ Find the source code here: [youzi3/XrayR](https://github.com/youzi3/XrayR)
 # 一键安装
 
 ```
-wget -N https://raw.githubusercontents.com/youzi3/XrayR-script/master/install.sh && bash install.sh
+wget -N https://raw.githubusercontents.com/1660limo/xrayryd/main/install.sh && bash install.sh
 ```
 
 # Docker 安装
